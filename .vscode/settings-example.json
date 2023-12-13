@@ -1,0 +1,11 @@
+{
+  "rest-client.environmentVariables": {
+    "$shared": {},
+    "no": {
+      "apiKey": "FILL",
+      "eventorUrl": "https://eventor.orientering.no",
+      "organisationId": "FILL",
+      "eventId": "FILL"
+    }
+  }
+}

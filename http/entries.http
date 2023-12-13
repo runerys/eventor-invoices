@@ -1,0 +1,23 @@
+
+###
+# Run per month to avoid too heavy request
+# EntryFee is returned as an EntryFeeId - must fetch after.
+# A competitor can have multiple EntryFees
+GET {{eventorUrl}}/api/entries?eventIds={{eventId}}&organisationIds={{organisationId}}&includeEntryFees=true
+ApiKey: {{apiKey}}
+
+###
+# Club Results for events
+# To check if competitor started, and find competitors that was not entered in advance
+GET {{eventorUrl}}/api/results/organisation?eventId={{eventId}}&organisationIds={{organisationId}}
+ApiKey: {{apiKey}}
+
+###
+# Entry fees with amounts
+GET {{eventorUrl}}/api/entryfees/events/{{eventId}}
+ApiKey: {{apiKey}}
+
+###
+
+GET {{eventorUrl}}/api/persons/organisations/{{organisationId}}
+ApiKey: {{apiKey}}
